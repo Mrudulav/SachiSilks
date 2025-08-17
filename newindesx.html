@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sachi Silks and Sarees</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; font-family:'Cormorant Garamond',serif; background:#fff8fa; color:#333; overflow-x:hidden; }
+
+    /* Hero */
+    header {
+      height:100vh;
+      background:linear-gradient(rgba(255,240,245,.6), rgba(255,240,245,.6)), url('images/hero.jpg') center/cover no-repeat;
+      display:flex; align-items:center; justify-content:center; text-align:center; position:relative;
+    }
+    header h1 { font-size:4rem; margin:0; color:#6a1b44; }
+    header p  { font-size:1.5rem; margin-top:.5rem; color:#a64d79; }
+    .scroll-down { position:absolute; bottom:20px; left:50%; transform:translateX(-50%); font-size:1.2rem; color:#6a1b44; animation:bounce 2s infinite; }
+    @keyframes bounce { 0%,20%,50%,80%,100%{transform:translate(-50%,0)} 40%{transform:translate(-50%,-10px)} 60%{transform:translate(-50%,-5px)} }
+
+    section { padding:4rem 2rem; text-align:center; }
+    h2 { font-size:2.5rem; color:#6a1b44; margin-bottom:2rem; } /* shared heading style */
+
+    /* Gallery */
+    .gallery-section { background:#fff0f6; }
+    .gallery-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+      gap:20px;
+      max-width:1200px;
+      margin:0 auto;
+    }
+    .gallery-grid img {
+      width:100%;
+      border-radius:12px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      object-fit:cover;
+      transition:transform .3s ease;
+
+      /* Straighten hack: adjust these two values to taste */
+      transform: rotate(-2deg) skewX(-2deg);
+      height: 300px;               /* keeps rows tidy; adjust if you prefer */
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.05) rotate(0deg) skewX(0deg);
+    }
+    @media (max-width: 900px){
+      .gallery-grid img { height:260px; }
+    }
+
+    /* Example: custom tweak for a specific image (optional)
+       .gallery-grid img:nth-child(3){ transform: rotate(-3deg) skewX(-1.5deg); } */
+
+    /* Contact */
+    .contact{ background:#fff; }
+    .contact-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem; max-width:1000px; margin:0 auto 1.5rem; }
+    .contact-card{ background:#fff; border:1px solid #f3d1e1; border-radius:1rem; padding:1rem; }
+    .contact-card h3{ margin:.2rem 0 .6rem; color:#6a1b44; font-family:'Segoe UI',Arial,sans-serif; font-weight:600; letter-spacing:.2px; }
+    .contact a{ color:#6a1b44; text-decoration:none; }
+    .contact a:hover{ text-decoration:underline; }
+    .order-steps{ max-width:800px; margin:0 auto; text-align:left; }
+    .order-steps li{ margin:.4rem 0; }
+
+    /* Floating WhatsApp */
+    .whatsapp-float{
+      position:fixed; bottom:20px; right:20px; background:#25d366; color:#fff; border-radius:50%;
+      width:60px; height:60px; display:flex; align-items:center; justify-content:center;
+      font-size:2rem; text-decoration:none; box-shadow:0 4px 6px rgba(0,0,0,.2); transition:background .3s;
+    }
+    .whatsapp-float:hover{ background:#1ebc57; }
+
+    footer{ background:#6a1b44; color:#fff; text-align:center; padding:2rem 1rem; }
+  </style>
+
+  <!-- Local business schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Sachi Silks and Sarees",
+    "telephone": "+91 9481400720",
+    "address": {"@type": "PostalAddress", "streetAddress": "Near siddaramanna hostel, Srinagar, Kyathsandra", "addressLocality": "Tumkur", "postalCode": "572104", "addressRegion": "Karnataka", "addressCountry": "IN"}
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Sachi Silks</h1>
+      <p>Every saree tells a story</p>
+    </div>
+    <div class="scroll-down"><i class="fas fa-chevron-down"></i></div>
+  </header>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We bring you handwoven sarees crafted with love and tradition. Each piece carries the grace and beauty of timeless design. <br>
+      ಹೃದಯದಿಂದ ಹೆಣೆದ ಸೀರೆಗಳು 💕
+    </p>
+  </section>
+
+  <!-- Gallery with matching heading + straighten hack -->
+  <section id="gallery" class="gallery-section">
+    <h2>Our Collection</h2>
+    <div class="gallery-grid">
+      <img src="images/s1.jpeg"  alt="Saree 1">
+      <img src="images/s2.jpeg"  alt="Saree 2">
+      <img src="images/s3.jpeg"  alt="Saree 3">
+      <img src="images/s4.jpeg"  alt="Saree 4">
+      <img src="images/s5.jpeg"  alt="Saree 5">
+      <img src="images/s6.jpeg"  alt="Saree 6">
+      <img src="images/s7.jpeg"  alt="Saree 7">
+      <img src="images/s8.jpeg"  alt="Saree 8">
+      <img src="images/s9.jpeg"  alt="Saree 9">
+      <img src="images/s10.jpeg" alt="Saree 10">
+      <img src="images/s11.jpeg" alt="Saree 11">
+      <img src="images/s12.jpeg" alt="Saree 12">
+      <img src="images/s13.jpeg" alt="Saree 13">
+      <img src="images/s14.jpeg" alt="Saree 14">
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact & Orders</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3><i class="fa-solid fa-location-dot"></i> Address</h3>
+        <p>Sachi Silks and Sarees<br>Near siddaramanna hostel,<br>Srinagar, Kyathsandra,<br>Tumkur 572104</p>
+        <p><a href="https://www.google.com/maps/search/?api=1&query=Near+siddaramanna+hostel+Srinagar+Kyathsandra+Tumkur+572104" target="_blank" rel="noopener">Open in Google Maps</a></p>
+      </div>
+      <div class="contact-card">
+        <h3><i class="fa-brands fa-whatsapp"></i> WhatsApp / Call</h3>
+        <p><a href="https://wa.me/919481400720" target="_blank" rel="noopener">+91 94814 00720 (WhatsApp)</a></p>
+        <p><a href="https://wa.me/919481400720?text=Hi%20Sachi%20Silks%20and%20Sarees%2C%20I'm%20interested%20in%20your%20collection." target="_blank" rel="noopener">Send a pre-filled message</a></p>
+        <p><a href="tel:+919481400720">Tap to Call</a></p>
+      </div>
+      <div class="contact-card">
+        <h3><i class="fa-solid fa-envelope"></i> Email</h3>
+        <p><a href="mailto:orders@sachisilks.com">orders@sachisilks.com</a></p>
+      </div>
+      <div class="contact-card">
+        <h3><i class="fa-regular fa-clock"></i> Hours</h3>
+        <p>Mon–Sat: 10:00 – 7:30<br>Sun: 11:00 – 4:00</p>
+      </div>
+    </div>
+    <h3>How to order</h3>
+    <ol class="order-steps">
+      <li>Browse the gallery and note the saree name or screenshot the design.</li>
+      <li>Message us on WhatsApp with the name and your location.</li>
+      <li>We’ll share close-ups, confirm stock, and shipping options.</li>
+    </ol>
+    <p style="margin-top:1rem">Shipping across India and international on request.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sachi Silks and Sarees · Tumkuru, Karnataka ·
+      <a href="mailto:orders@sachisilks.com">orders@sachisilks.com</a> ·
+      <a href="https://wa.me/919481400720" target="_blank" rel="noopener">+91 94814 00720 (WhatsApp)</a> ·
+      <a href="tel:+919481400720">Call</a>
+    </p>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/919481400720?text=Hi%20Sachi%20Silks%20and%20Sarees%2C%20I'm%20interested%20in%20your%20collection."
+     class="whatsapp-float" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</body>
+</html>
